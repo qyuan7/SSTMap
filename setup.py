@@ -13,9 +13,6 @@ extensions.append(Extension('_sstmap_entropy',
                             sources=['sstmap/_sstmap_entropy.cpp', 'sstmap/kdhsa102.cpp'],
                             language="c++"))
 
-extensions.append(Extension('_sstmap_probableconfig',
-                            sources=['sstmap/_sstmap_probable.cpp', 'sstmap/probable.cpp'],
-                            language="c++"))
 
 setup(name='sstmap',
       author='Kamran Haider',
@@ -31,5 +28,4 @@ setup(name='sstmap',
       zip_safe=False,
       entry_points={
           'console_scripts':
-              ['run_hsa = sstmap.scripts.run_hsa:entry_point',
-               'run_gist = sstmap.scripts.run_gist:entry_point']}, )
+              ['run_hsa = sstmap.scripts.run_hsa:entry_point']}, )
