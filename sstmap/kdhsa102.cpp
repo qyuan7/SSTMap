@@ -575,7 +575,7 @@ double kdtree::run_tree_trans(std::vector<double > &cls) {
     int fcount = 10000;
 
     for (int i = 0; i < numvals; i++) {
-        gd += log((0.0329223149*fcount*4*pi*pow(dh[i], 3))/3);
+        gd += log((0.0329223149*numvals*4*pi*pow(dh[i], 3))/3);
     }
 
     s = R*T*0.239*(gd/numvals + 0.5772156649)/1000;
