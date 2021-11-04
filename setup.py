@@ -12,6 +12,10 @@ extensions.append(Extension('_sstmap_ext',
 extensions.append(Extension('_sstmap_entropy',
                             sources=['sstmap/_sstmap_entropy.cpp', 'sstmap/kdhsa102.cpp'],
                             language="c++"))
+                            
+extensions.append(Extension('_sstmap_probableconfig',
+                            sources=['sstmap/_sstmap_probable.cpp', 'sstmap/probable.cpp'],
+                            language="c++"))
 
 
 setup(name='sstmap',
