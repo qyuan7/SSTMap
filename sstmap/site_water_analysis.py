@@ -802,12 +802,12 @@ class SiteWaterAnalysis(WaterAnalysis):
             input_e_arg = os.path.abspath(output_dir + "/" + cluster_filename)
             try:
                 ext1.run_kdhsa102(input_i_arg, input_e_arg)
-                #ext2.run_probconfig(input_i_arg, input_o_arg)
+                ext2.run_probconfig(input_i_arg, input_o_arg)
             except Exception as e:
                 print(e)
 
-        #a = np.loadtxt(input_o_arg, usecols=(6, 7, 8))
-        #write_watpdb_from_coords("probable_configs", a, full_water_res=True)
+        a = np.loadtxt(input_o_arg, usecols=(6, 7, 8))
+        write_watpdb_from_coords("probable_configs", a, full_water_res=True)
         # extract entropy data and put into summary data
         if os.path.isfile(trans_dat) and os.path.isfile(orient_dat):
             trans_ent, orient_ent = np.loadtxt(trans_dat), np.loadtxt(orient_dat)
