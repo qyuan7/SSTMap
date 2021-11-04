@@ -44,7 +44,7 @@ from sstmap.utils import *
 from sstmap.water_analysis import WaterAnalysis
 import _sstmap_ext as calc
 import _sstmap_entropy as ext1
-#import _sstmap_probableconfig as ext2
+import _sstmap_probableconfig as ext2
 
 
 
